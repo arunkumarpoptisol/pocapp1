@@ -1,0 +1,59 @@
+# FOR TESTING ONLY!
+type TODO @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  name: String!
+  desc: String!
+  comments: [Commentdata] @hasMany(indexName: "byPost", fields: ["id"])
+}
+
+type Commentdata @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  todoID: ID! @index(name: "byPost")
+  content: String!
+}
+
+type School @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  schoolName: String!
+  schoolAddress: String!
+  Courses: [Course!] @hasMany(indexName: "bySchool", fields: ["id"])
+  Students: [User!] @hasMany(indexName: "bySchool", fields: ["id"])
+  Standards: [Standard!] @hasMany(indexName: "bySchool", fields: ["id"])
+  contactName: String
+  email: String
+  phone: String
+}
+
+type User @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  firstname: String!
+  lastname: String!
+  email: AWSEmail!
+  schoolID: ID! @index(name: "bySchool")
+  Course: [Course] @manyToMany(relationName: "UserCourse")
+}
+
+type Course @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  name: String!
+  desc: String!
+  schoolID: ID! @index(name: "bySchool")
+  user: [User] @manyToMany(relationName: "UserCourse")
+}
+
+type Standard @model @auth(rules: [{ allow: private }]) {
+  id: ID!
+  name: String!
+  description: String 
+  type: StandardType!
+  schoolID: ID! @index(name: "bySchool")
+}
+
+enum StandardType {
+  COURSE
+  SCHOOL
+}
+
+type Query{
+  
+}

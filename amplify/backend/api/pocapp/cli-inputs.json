@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "pocapp",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\arunkumar.p\\Desktop\\POC\\poc-app-1\\amplify\\backend\\api\\pocapp\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authpocapp01ab19e2"
+    },
+    "conflictResolution": {
+      "defaultResolutionStrategy": {
+        "type": "AUTOMERGE"
+      }
+    },
+    "additionalAuthTypes": []
+  }
+}

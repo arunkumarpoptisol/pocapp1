@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pocapp-dev-133713-authRole",
+      "UnauthRoleArn": "arn:aws:iam::500229281434:role/amplify-pocapp-dev-133713-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::500229281434:role/amplify-pocapp-dev-133713-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-pocapp-dev-133713-deployment",
+      "UnauthRoleName": "amplify-pocapp-dev-133713-unauthRole",
+      "StackName": "amplify-pocapp-dev-133713",
+      "StackId": "arn:aws:cloudformation:ap-south-1:500229281434:stack/amplify-pocapp-dev-133713/45370fb0-e702-11ec-bffd-0a1621de353a",
+      "AmplifyAppId": "d2xicmj2ry9iza"
+    },
+    "categories": {
+      "auth": {
+        "pocapp01ab19e2": {}
+      }
+    }
+  }
+}
